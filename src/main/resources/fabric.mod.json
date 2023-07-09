@@ -1,9 +1,9 @@
 {
 	"schemaVersion": 1,
-	"id": "herbae-magica",
+	"id": "herbae_magica",
 	"version": "${version}",
 	"name": "Herbae Magica",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "A mod about doing magics with the power of plants",
 	"authors": [
 		"Me!"
 	],
@@ -11,23 +11,19 @@
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/herbae-magica/icon.png",
+	"license": "MIT License",
+	"icon": "assets/herbae_magica/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.ojarrisonn.ExampleMod"
+			"com.ojarrisonn.herbaemagica.HerbaeMagicaMod"
 		],
-		"client": [
-			"com.ojarrisonn.ExampleModClient"
+		"fabric-datagen": [
+			"com.ojarrisonn.herbaemagica.HerbaeMagicaModDataGenerator"
 		]
 	},
 	"mixins": [
-		"herbae-magica.mixins.json",
-		{
-			"config": "herbae-magica.client.mixins.json",
-			"environment": "client"
-		}
+		"herbae_magica.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.14.21",
